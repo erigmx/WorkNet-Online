@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento - WorkNet</title>
+    <link rel="stylesheet" href="style/pagamento.css">
+</head>
+<body>
+    <header class="cabecalho-principal">
+        <nav class="barra-navegacao">
+            <section class="marca-navegacao">
+                <a href="/WorkNet/home.html">
+                    <img src="/WorkNet/img/imagem_2025-10-29_203356460-removebg-preview.png" alt="Logotipo WorkNet">
+                </a>
+            </section>
+
+            <form class="formulario-pesquisa" id="formulario-pesquisa">
+                <input 
+                    type="search" 
+                    id="campo-pesquisa" 
+                    placeholder="Busque por serviços ou categorias..."
+                    autocomplete="off"
+                >
+                <button type="submit" aria-label="Buscar">🔍</button>
+            </form>
+
+            <section class="usuario-navegacao">
+                <a href="/WorkNet/home.html">Início</a>
+                <a href="/WorkNet/home.html#servicos">Serviços</a>
+                <a href="/WorkNet/tela_pagamnto.html">Sobre</a>
+                <button id="botao-perfil" class="botao-perfil" onclick="window.location.href='/WorkNet/perfil.html'">Perfil</button>
+                <button id="botao-sair" class="botao-sair">Sair</button>
+            </section>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="container-fluid">
+            <article class="payment-layout">
+                <section class="payment-section">
+                    <h2 class="page-title">Finalizar Pagamento</h2>
+                    
+                    <details class="payment-method">
+                        <summary class="method-header">
+                            <span class="pix-icon">▪</span>
+                            <span>Pix</span>
+                        </summary>
+                    </details>
+
+                    <details class="credit-card-section" id="cardSection">
+                        <summary class="accordion-btn" id="cardAccordion">
+                            <span class="card-icon">💳</span>
+                            <span>Cartão de crédito</span>
+                        </summary>
+                        
+                        <section class="card-content" id="cardContent">
+                            <section class="saved-cards" id="savedCardsSection">
+                                <h3 class="section-subtitle">Cartões Salvos</h3>
+                                
+                                <fieldset class="cards-fieldset">
+                                    <legend class="sr-only">Selecione um cartão</legend>
+                                    
+                                    <label class="card-item">
+                                        <input type="radio" name="card" value="card1" checked>
+                                        <span class="card-info">
+                                            <strong class="card-brand mastercard">●●</strong>
+                                            <span class="card-name">Banco Do Brasil</span>
+                                            <span class="card-number">•••• •••• •••• 4578</span>
+                                        </span>
+                                        <span class="radio-custom"></span>
+                                    </label>
+
+                                    <label class="card-item">
+                                        <input type="radio" name="card" value="card2">
+                                        <span class="card-info">
+                                            <strong class="card-brand visa">VISA</strong>
+                                            <span class="card-name">Banco XP</span>
+                                            <span class="card-number">•••• •••• •••• 4521</span>
+                                        </span>
+                                        <span class="radio-custom"></span>
+                                    </label>
+                                </fieldset>
+
+                                <button type="button" class="add-card-btn" id="addCardBtn">
+                                    <span class="plus-icon">+</span>
+                                    Adicionar Novo Cartão
+                                </button>
+                            </section>
+
+                            <form class="new-card-form" id="newCardForm">
+                                <h3 class="section-subtitle">Adicionar Novo Cartão</h3>
+                                
+                                <fieldset class="form-fieldset">
+                                    <legend class="sr-only">Dados do cartão</legend>
+                                    
+                                    <label class="form-group">
+                                        <span class="form-label">Nome no Cartão</span>
+                                        <input type="text" name="cardName" class="form-input" placeholder="" required>
+                                    </label>
+
+                                    <label class="form-group">
+                                        <span class="form-label">Número do Cartão</span>
+                                        <input type="text" name="cardNumber" class="form-input" placeholder="•••• •••• •••• ••••" maxlength="19" required>
+                                    </label>
+
+                                    <section class="form-row">
+                                        <label class="form-group">
+                                            <span class="form-label">Validade</span>
+                                            <input type="text" name="expiry" class="form-input" placeholder="MM/AA" maxlength="5" required>
+                                        </label>
+
+                                        <label class="form-group">
+                                            <span class="form-label">CVV</span>
+                                            <input type="text" name="cvv" class="form-input" placeholder="123" maxlength="3" required>
+                                        </label>
+                                    </section>
+
+                                    <label class="form-group">
+                                        <span class="form-label">CPF do Titular</span>
+                                        <input type="text" name="cpf" class="form-input" placeholder="000.000.000-00" maxlength="14" required>
+                                    </label>
+
+                                    <section class="form-actions">
+                                        <button type="button" class="btn-cancel" id="cancelBtn">Cancelar</button>
+                                        <button type="submit" class="btn-save">Salvar Cartão</button>
+                                    </section>
+                                </fieldset>
+                            </form>
+                        </section>
+                    </details>
+                </section>
+
+                <aside class="summary-section">
+                    <article class="service-card">
+                        <img src="img/images.jpg" alt="Foto do prestador Mario Veloso" class="service-image">
+                        <section class="service-info">
+                            <h3 class="service-title">Mario Veloso</h3>
+                            <p class="service-description">Serviço de Encanador</p>
+                            <p class="service-price">R$10.99</p>
+                        </section>
+                    </article>
+
+                    <section class="order-summary">
+                        <h3 class="summary-title">Resumo do pedido</h3>
+                        
+                        <dl class="summary-list">
+                            <dt>Serviço de Encanador</dt>
+                            <dd>R$10.99</dd>
+                            
+                            <dt>Taxa de Serviço</dt>
+                            <dd>R$2.00</dd>
+                        </dl>
+                        
+                        <dl class="summary-total">
+                            <dt class="total-label">Total</dt>
+                            <dd class="total-value">R$12.99</dd>
+                        </dl>
+
+                        <button type="button" class="pay-btn" id="payBtn">Pagar Agora</button>
+                    </section>
+                </aside>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <section class="container-rodape">
+            <section class="rodape-esquerda">
+                <h2 class="logo">WorkNet</h2>
+                <nav aria-label="Redes sociais" class="icones-sociais">
+                    <ul>
+                        <li><a href="#"><img src="/WorkNet/img/icons/facebook.png" alt="Facebook"></a></li>
+                        <li><a href="#"><img src="/WorkNet/img/icons/linkedin.png" alt="LinkedIn"></a></li>
+                        <li><a href="#"><img src="/WorkNet/img/icons/instagram.png" alt="Instagram"></a></li>
+                    </ul>
+                </nav>
+            </section>
+
+            <nav aria-label="Links institucionais" class="rodape-direita">
+                <ul>
+                    <li><a href="/WorkNet/home.html#servicos">Serviços Populares</a></li>
+                    <li><a href="/WorkNet/home.html#servicos">Categorias</a></li>
+                    <li><a href="/WorkNet/home.html#servicos">Avaliações</a></li>
+                    <li><a href="/WorkNet/tela_pagamnto.html">Sobre Nós</a></li>
+                </ul>
+            </nav>
+        </section>
+    </footer>
+
+    <script src="JS/pagamento.js"></script>
+</body>
+</html>

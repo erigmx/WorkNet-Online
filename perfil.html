@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkNet - Meu Perfil</title>
+    <link rel="stylesheet" href="/WorkNet/style/perfil.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="cabecalho-principal">
+        <nav class="barra-navegacao">
+            <section class="marca-navegacao">
+                <a href="/WorkNet/home.html">
+                    <img src="/WorkNet/img/imagem_2025-10-29_203356460-removebg-preview.png" alt="Logotipo WorkNet">
+                </a>
+            </section>
+
+            <form class="formulario-pesquisa" id="formulario-pesquisa">
+                <input 
+                    type="search" 
+                    id="campo-pesquisa" 
+                    placeholder="Busque por serviços ou categorias..."
+                    autocomplete="off"
+                >
+                <button type="submit" aria-label="Buscar">🔍</button>
+            </form>
+
+            <section class="usuario-navegacao">
+                <a href="/WorkNet/home.html">Início</a>
+                <a href="/WorkNet/home.html#servicos">Serviços</a>
+                <a href="/WorkNet/perfil.html#sobre">Sobre</a>
+                <button id="botao-perfil" class="botao-perfil" onclick="window.location.href='/WorkNet/perfil.html'">Perfil</button>
+                <button id="botao-sair" class="botao-sair">Sair</button>
+            </section>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="conteudo-principal">
+        <section class="container-perfil">
+            
+            <!-- Card do Perfil -->
+            <article class="card-perfil">
+                <header class="perfil-header">
+                    <div class="avatar-container">
+                        <div class="avatar" id="avatar-usuario">
+                            <span id="avatar-iniciais"></span>
+                        </div>
+                        <button class="btn-editar-avatar" title="Alterar foto">📷</button>
+                    </div>
+                    
+                    <div class="perfil-info">
+                        <h1 id="perfil-nome">Carregando...</h1>
+                        <p class="perfil-tipo" id="perfil-tipo">...</p>
+                        <p class="perfil-membro-desde">Membro desde <span id="perfil-data"></span></p>
+                    </div>
+                </header>
+
+                <div class="perfil-stats">
+                    <div class="stat-item">
+                        <span class="stat-numero" id="stat-servicos">0</span>
+                        <span class="stat-label">Serviços</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-numero" id="stat-avaliacoes">0</span>
+                        <span class="stat-label">Avaliações</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-numero" id="stat-contratos">0</span>
+                        <span class="stat-label">Contratos</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Informações Detalhadas -->
+            <article class="card-informacoes">
+                <header class="card-header">
+                    <h2>Informações Pessoais</h2>
+                    <button class="btn-editar-info" id="btn-editar-info">✏️ Editar</button>
+                </header>
+
+                <div class="informacoes-grid">
+                    <div class="info-item">
+                        <span class="info-label">Email:</span>
+                        <span class="info-valor" id="info-email">email@exemplo.com</span>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="info-label">CPF:</span>
+                        <span class="info-valor" id="info-cpf">000.000.000-00</span>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="info-label">Tipo de Usuário:</span>
+                        <span class="info-valor" id="info-tipo-usuario">Cliente</span>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="info-label">Cadastro:</span>
+                        <span class="info-valor" id="info-data-cadastro">00/00/0000</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Ações do Perfil (visível apenas para prestadores) -->
+            <article class="card-acoes" id="card-acoes-prestador" style="display: none;">
+                <header class="card-header">
+                    <h2>Ações do Prestador</h2>
+                </header>
+
+                <div class="acoes-grid">
+                    <button class="btn-acao btn-cadastrar-servico" id="btn-cadastrar-servico" onclick="window.location.href='/WorkNet/cadastro_servico.html'">
+                        <span class="icone">+</span>
+                        <span class="texto">Cadastrar Serviço</span>
+                    </button>
+
+                    <button class="btn-acao btn-meus-servicos" id="btn-meus-servicos">
+                        <span class="icone">📋</span>
+                        <span class="texto">Meus Serviços</span>
+                    </button>
+                </div>
+            </article>
+
+            <!-- Meus Serviços (para prestadores) -->
+            <article class="card-meus-servicos" id="card-meus-servicos" style="display: none;">
+                <header class="card-header">
+                    <h2>Meus Serviços Cadastrados</h2>
+                </header>
+
+                <div class="servicos-lista" id="servicos-lista">
+                    <!-- Serviços serão renderizados aqui -->
+                </div>
+            </article>
+
+            <!-- Configurações -->
+            <article class="card-configuracoes">
+                <header class="card-header">
+                    <h2>Configurações</h2>
+                </header>
+
+                <div class="configuracoes-lista">
+                    <button class="config-item" id="btn-alterar-senha">
+                        <span class="config-icone">🔒</span>
+                        <div class="config-info">
+                            <span class="config-titulo">Alterar Senha</span>
+                            <span class="config-descricao">Modifique sua senha de acesso</span>
+                        </div>
+                        <span class="config-seta">›</span>
+                    </button>
+
+                    <button class="config-item" id="btn-notificacoes">
+                        <span class="config-icone">🔔</span>
+                        <div class="config-info">
+                            <span class="config-titulo">Notificações</span>
+                            <span class="config-descricao">Gerencie suas notificações</span>
+                        </div>
+                        <span class="config-seta">›</span>
+                    </button>
+
+                    <button class="config-item config-item-danger" id="btn-excluir-conta">
+                        <span class="config-icone">🗑️</span>
+                        <div class="config-info">
+                            <span class="config-titulo">Excluir Conta</span>
+                            <span class="config-descricao">Remover permanentemente sua conta</span>
+                        </div>
+                        <span class="config-seta">›</span>
+                    </button>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <section class="container-rodape">
+            <section class="rodape-esquerda">
+                <h2 class="logo">WorkNet</h2>
+                <nav aria-label="Redes sociais" class="icones-sociais">
+                    <ul>
+                        <li><a href="#"><img src="/WorkNet/img/icons/facebook.png" alt="Facebook"></a></li>
+                        <li><a href="#"><img src="/WorkNet/img/icons/linkedin.png" alt="LinkedIn"></a></li>
+                        <li><a href="#"><img src="/WorkNet/img/icons/instagram.png" alt="Instagram"></a></li>
+                    </ul>
+                </nav>
+            </section>
+
+            <nav aria-label="Links institucionais" class="rodape-direita">
+                <ul>
+                    <li><a href="/WorkNet/home.html#servicos">Serviços Populares</a></li>
+                    <li><a href="/WorkNet/home.html#servicos">Categorias</a></li>
+                    <li><a href="/WorkNet/home.html#servicos">Avaliações</a></li>
+                    <li><a href="/WorkNet/index.html#sobre">Sobre Nós</a></li>
+                </ul>
+            </nav>
+        </section>
+    </footer>
+
+    <script src="/WorkNet/JS/perfil.js"></script>
+</body>
+</html>

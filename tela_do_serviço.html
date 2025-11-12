@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serviço de Encanador - Mario Veloso</title>
+  <link rel="stylesheet" href="style/telaservico.css">
+</head>
+<body>
+
+ <header class="cabecalho-principal">
+    <nav class="barra-navegacao">
+
+      <section class="marca-navegacao">
+        <a href="/WorkNet/home.html">
+          <img src="/WorkNet/img/imagem_2025-10-29_203356460-removebg-preview.png" alt="Logotipo WorkNet">
+        </a>
+      </section>
+
+      <form class="formulario-pesquisa" id="formulario-pesquisa">
+        <input 
+          type="search" 
+          id="campo-pesquisa" 
+          placeholder="Busque por serviços ou categorias..."
+          autocomplete="off"
+        >
+        <button type="submit" aria-label="Buscar">🔍</button>
+      </form>
+
+      <section class="usuario-navegacao">
+        <a href="/WorkNet/home.html">Início</a>
+        <a href="/WorkNet/home.html#servicos">Serviços</a>
+        <a href="/WorkNet/index.html#sobre">Sobre</a>
+        <button id="botao-conta" class="botao-conta" onclick="window.location.href='/WorkNet/perfil.html'">Conta</button>
+        <button id="botao-sair" class="botao-sair" onclick="window.location.href='/WorkNet/index.html'">Sair</button>
+      </section>
+    </nav>
+  </header>
+
+  <main class="principal container">
+
+    <!-- serviço principal -->
+    <section class="servico-destaque">
+      <div class="imagem-servico">
+        <img src="img/encanador.png" alt="Foto de encanador em serviço">
+      </div>
+
+      <div class="info-servico">
+        <h2>Mario Veloso</h2>
+        <h3>Serviço de Encanador</h3>
+        <p class="descricao-curta">Serviços diversos de encanamento</p>
+        <p class="preco">R$ 10,99</p>
+        <p class="texto">
+          Atendimento ágil, serviço de qualidade e garantia de segurança para sua casa ou empresa.
+        </p>
+
+        <button class="botao-contratar" onclick="window.location.href='/WorkNet/tela_pagamnto.html'">Contratar Serviço</button>
+
+      
+      </div>
+    </section>
+
+    <!-- Outros serviços recomendados -->
+    <section class="servicos-relacionados">
+    <h2>Serviços relacionados</h2>
+
+    <div class="grade-servicos">
+        <article class="cartao-servico">
+            <div class="cartao-servico-imagem">
+                <img src="img/eletricista.png" alt="Serviço de Eletricista">
+            </div>
+            <h3>Serviço de Eletricista</h3>
+            <p>Reparos elétricos simples e complexos</p>
+            <span class="preco">R$ 10,99</span>
+        </article>
+
+        <article class="cartao-servico">
+            <div class="cartao-servico-imagem">
+                <img src="img/faxina.jpg" alt="Serviço de Faxina">
+            </div>
+            <h3>Serviço de Faxina</h3>
+            <p>Limpeza residencial completa</p>
+            <span class="preco">R$ 10,99</span>
+        </article>
+
+        <article class="cartao-servico">
+            <div class="cartao-servico-imagem">
+                <img src="img/motorista.jpg" alt="Motorista Particular">
+            </div>
+            <h3>Motorista Particular</h3>
+            <p>Transporte com conforto e segurança</p>
+            <span class="preco">R$ 10,99</span>
+        </article>
+
+        <article class="cartao-servico">
+            <div class="cartao-servico-imagem">
+                <img src="img/encanador2.jpg" alt="Encanador Autônomo">
+            </div>
+            <h3>Encanador Autônomo</h3>
+            <p>Serviços rápidos de reparo hidráulico</p>
+            <span class="preco">R$ 10,99</span>
+        </article>
+
+        <article class="cartao-servico">
+            <div class="cartao-servico-imagem">
+                <img src="img/pedreiro.jpg" alt="Auxiliar de Pedreiro">
+            </div>
+            <h3>Auxiliar de Pedreiro</h3>
+            <p>Trabalho de apoio em obras</p>
+            <span class="preco">R$ 10,99</span>
+        </article>
+
+        <article class="cartao-servico">
+            <div class="cartao-servico-imagem">
+                <img src="img/encanador3.jpg" alt="Serviço de Encanador">
+            </div>
+            <h3>Serviço de Encanador</h3>
+            <p>Serviços gerais de encanamento</p>
+            <span class="preco">R$ 10,99</span>
+        </article>
+    </div>
+</section>
+  </main>
+
+ <footer>
+    <section class="container-rodape">
+
+      <section class="rodape-esquerda">
+        <h2 class="logo">WorkNet</h2>
+
+        <nav aria-label="Redes sociais" class="icones-sociais">
+          <ul>
+            <li><a href="#"><img src="/WorkNet/img/icons/facebook.png" alt="Facebook"></a></li>
+            <li><a href="#"><img src="/WorkNet/img/icons/linkedin.png" alt="LinkedIn"></a></li>
+            <li><a href="#"><img src="/WorkNet/img/icons/instagram.png" alt="Instagram"></a></li>
+          </ul>
+        </nav>
+      </section>
+
+      <nav aria-label="Links institucionais" class="rodape-direita">
+        <ul>
+          <li><a href="/WorkNet/home.html#servicos">Serviços Populares</a></li>
+          <li><a href="/WorkNet/home.html#servicos">Categorias</a></li>
+          <li><a href="/WorkNet/home.html#servicos">Avaliações</a></li>
+          <li><a href="/WorkNet/index.html#sobre">Sobre Nós</a></li>
+        </ul>
+      </nav>
+    </section>
+  </footer>
+
+  <script src="/WorkNet/JS/servico.js"></script>
+</body>
+</html>

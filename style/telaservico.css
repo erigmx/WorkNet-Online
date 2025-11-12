@@ -1,0 +1,329 @@
+/* alinhamento do site */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f9f9f9;
+  color: #1f1f1f;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+/* header generico, vai ser mudado */
+.cabecalho-principal {
+  background: url(/WorkNet/img/Vector.png);
+  background-color: #060061;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.barra-navegacao {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 100px;
+}
+
+.marca-navegacao img {
+  width: 100px;
+  height: auto;
+}
+
+/* Serviço principal  em destaque, o que foi escolhido */
+.servico-destaque {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin: 40px 0;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.imagem-servico {
+  flex: 1;
+}
+
+.info-servico {
+  flex: 1;
+}
+
+.info-servico h2 {
+  font-size: 26px;
+  color: #0b0b58;
+}
+
+.info-servico h3 {
+  font-size: 22px;
+  color: #0b0b58;
+  margin-bottom: 6px;
+}
+
+.descricao-curta {
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+.preco {
+  font-size: 18px;
+  color: #007bff;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.texto {
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+.botao-contratar {
+  background-color: #0b0b58;
+  color: #ffffff;
+  padding: 10px 28px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.botao-contratar:hover {
+  background-color: #007bff;
+}
+
+.nota {
+  font-size: 13px;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Serviços extras recomendados */
+.servicos-relacionados {
+  margin-top: 60px;
+}
+
+.servicos-relacionados h2 {
+  font-size: 24px;
+  color: #0b0b58;
+  margin-bottom: 20px;
+}
+
+.grade-servicos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.cartao-servico {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 12px;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.cartao-servico:hover {
+  transform: translateY(-3px);
+}
+
+.cartao-servico-imagem {
+    aspect-ratio: 16 / 9; 
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 10px;
+}
+
+.cartao-servico-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cartao-servico h3 {
+  font-size: 17px;
+  margin: 8px 0 4px;
+  color: #0b0b58;
+}
+
+.cartao-servico p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+/* ===== Formulário de Pesquisa ===== */
+.formulario-pesquisa {
+  flex: 1;
+  max-width: 100%;
+  display: flex;
+  gap: 1rem;
+}
+
+.formulario-pesquisa input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  transition: border-color 0.3s;
+}
+
+.formulario-pesquisa input:focus {
+  outline: none;
+  border-color: #060061;
+}
+
+.formulario-pesquisa button {
+  padding: 0.5rem 0.5rem;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
+}
+
+.formulario-pesquisa button:hover {
+  background-color: #ebebeb;
+}
+
+/* ===== Navegação do Usuário ===== */
+.usuario-navegacao {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.usuario-navegacao a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.botao-conta{
+    padding: 0.75rem 1.5rem;
+  background-color: #fff;
+  color: #060061;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.botao-sair {
+  padding: 0.75rem 1.5rem;
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.botao-sair:hover {
+  background-color: #dc2626;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: #00084f;
+  background-image: url(/WorkNet/img/Vector.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  padding: 3rem 5rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container-rodape {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+/* ===== Lado Esquerdo ===== */
+.rodape-esquerda {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+/* ===== Ícones Sociais ===== */
+.icones-sociais ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+.icones-sociais a img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  filter: brightness(0) invert(1);
+}
+
+.icones-sociais a img:hover {
+  opacity: 0.7;
+  transform: scale(1.1);
+}
+
+/* ===== Lado Direito ===== */
+.rodape-direita ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  text-align: right;
+}
+
+.rodape-direita a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: opacity 0.3s ease;
+}
+
+.rodape-direita a:hover {
+  opacity: 0.7;
+}
+
+
+
+
+
+
+
+
+

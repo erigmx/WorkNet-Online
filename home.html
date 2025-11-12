@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WorkNet</title>
+  <link rel="stylesheet" href="/WorkNet/style/home.css">
+</head>
+
+<body>
+  <!-- ===== Cabeçalho Principal ===== -->
+  <header class="cabecalho-principal">
+    <nav class="barra-navegacao">
+
+      <section class="marca-navegacao">
+        <a href="/WorkNet/home.html">
+          <img src="/WorkNet/img/imagem_2025-10-29_203356460-removebg-preview.png" alt="Logotipo WorkNet">
+        </a>
+      </section>
+
+      <form class="formulario-pesquisa" id="formulario-pesquisa">
+        <input 
+          type="search" 
+          id="campo-pesquisa" 
+          placeholder="Busque por serviços ou categorias..."
+          autocomplete="off"
+        >
+        <button type="submit" aria-label="Buscar">🔍</button>
+      </form>
+
+      <section class="usuario-navegacao">
+        <a href="/WorkNet/home.html">Início</a>
+        <a href="#servicos">Serviços</a>
+        <a href="/WorkNet/home.html#rodape">Sobre</a>
+        <button id="botao-conta" class="botao-conta" onclick="window.location.href='/WorkNet/perfil.html'">Perfil</button>
+        <button id="botao-sair" class="botao-sair">Sair</button>
+      </section>
+    </nav>
+  </header>
+
+  <!-- ===== Conteúdo Principal ===== -->
+  <main class="conteudo-principal">
+
+    <!-- ===== Serviços em Destaque ===== -->
+    <section class="secao-servicos-destaque" id= "servicos">
+      <header class="cabecalho-secao">
+        <h2>Serviços mais contratados</h2>
+      </header>
+
+      <article class="grade-servicos">
+        <figure class="item-servico">
+          <img src="/WorkNet/img/carreto.jpeg" alt="Serviço de Fretagem">
+          <figcaption>
+            <h3>Serviço de Fretagem</h3>
+            <p>Transporte rápido, seguro e confiável.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="item-servico">
+          <img src="/WorkNet/img/download.jpeg" alt="Serviço de Doméstica">
+          <figcaption>
+            <h3>Serviço Doméstico</h3>
+            <p>Deixe sua casa sempre limpa e organizada.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="item-servico">
+          <img src="/WorkNet/img/encanador.jpeg" alt="Diarista">
+          <figcaption>
+            <h3>Encanador</h3>
+            <p>Resolva problemas envolvendo encanação de maneira rápida.</p>
+          </figcaption>
+        </figure>
+      </article>
+    </section>
+
+    <!-- ===== Categorias ===== -->
+    <section class="secao-categorias" id="servicos">
+      <header class="cabecalho-secao">
+        <h2>Categorias</h2>
+      </header>
+
+      <article class="grade-categorias">
+        <figure class="cartao-categoria" data-categoria="domesticos">
+          <img src="/WorkNet/img/domesticos.jpg" alt="Domésticos">
+          <figcaption><h3>Serviços de casa</h3></figcaption>
+        </figure>
+
+        <figure class="cartao-categoria" data-categoria="jardinagem">
+          <img src="/WorkNet/img/jardinagem.png" alt="Jardinagem">
+          <figcaption><h3>Jardinagem</h3></figcaption>
+        </figure>
+
+        <figure class="cartao-categoria" data-categoria="pintura">
+          <img src="/WorkNet/img/pintor.png" alt="Pintura">
+          <figcaption><h3>Pintura</h3></figcaption>
+        </figure>
+
+        <figure class="cartao-categoria" data-categoria="eletricista">
+          <img src="/WorkNet/img/categoria_eletricista.jpg" alt="Eletricista">
+          <figcaption><h3>Eletricista</h3></figcaption>
+        </figure>
+      </article>
+    </section>
+
+    <!-- ===== Divulgação de Serviços ===== -->
+    <section class="secao-divulgacao-servicos">
+      <header class="cabecalho-secao">
+        <h2>Divulgação de Serviços</h2>
+        <button class="botao-adicionar-servico" id="botao-adicionar-servico" style="display: none;">+ Divulgar Serviço</button>
+      </header>
+
+      <section id="sem-resultados" class="sem-resultados" style="display: none;">
+        <p>😕 Nenhum resultado encontrado</p>
+        <span>Tente pesquisar outro termo ou categoria</span>
+      </section>
+
+      <article class="grade-divulgacoes" id="grade-servicos">
+        Cards de serviços gerados via JavaScript
+      </article>
+    </section> 
+  </main>
+
+  <!-- ===== Rodapé ===== -->
+  <footer>
+    <section class="container-rodape" id = "rodape">
+
+      <section class="rodape-esquerda">
+        <h2 class="logo">WorkNet</h2>
+
+        <nav aria-label="Redes sociais" class="icones-sociais">
+          <ul>
+            <li><a href="#"><img src="/WorkNet/img/icons/facebook.png" alt="Facebook"></a></li>
+            <li><a href="#"><img src="/WorkNet/img/icons/linkedin.png" alt="LinkedIn"></a></li>
+            <li><a href="#"><img src="/WorkNet/img/icons/instagram.png" alt="Instagram"></a></li>
+          </ul>
+        </nav>
+      </section>
+
+      <nav aria-label="Links institucionais" class="rodape-direita">
+        <ul>
+          <li><a href="#servicos">Serviços Populares</a></li>
+          <li><a href="#servicos">Categorias</a></li>
+          <li><a href="#servicos">Avaliações</a></li>
+          <li><a href="/WorkNet/index.html#sobre">Sobre Nós</a></li>
+        </ul>
+      </nav>
+    </section>
+  </footer>
+
+  <script src="/WorkNet/JS/home.js"></script>
+</body>
+</html>

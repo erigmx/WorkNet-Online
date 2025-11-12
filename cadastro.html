@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkNet - Cadastro</title>
+    <link rel="stylesheet" href="/WorkNet/style/cadastro.css">
+</head>
+<body>
+    <main>
+        <section class="form-section">
+            <form>
+                <fieldset>
+                    <legend class="sr-only">Dados de Cadastro</legend>
+                    
+                    <label for="nome">
+                        <span>Nome</span>
+                        <input 
+                            type="text" 
+                            id="nome" 
+                            name="nome" 
+                            placeholder="Seu nome completo"
+                            required
+                        >
+                    </label>
+
+                    <label for="email">
+                        <span>Email</span>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="exemplo@email.com"
+                            required
+                        >
+                    </label>
+
+                    <label for="senha">
+                        <span>Senha</span>
+                        <input 
+                            type="password" 
+                            id="senha" 
+                            name="senha" 
+                            placeholder="••••••••"
+                            required
+                        >
+                    </label>
+
+                    <label for="cpf">
+                        <span>CPF</span>
+                        <input 
+                            type="text" 
+                            id="cpf" 
+                            name="cpf" 
+                            placeholder="000.000.000-00"
+                            required
+                        >
+                    </label>
+
+                    <label for="tipo-usuario">
+                        <span>Tipo de Usuário</span>
+                        <select id="tipo-usuario" name="tipo-usuario" required>
+                            <option value="">Selecione uma opção</option>
+                            <option value="cliente">Cliente</option>
+                            <option value="prestador">Prestador de Serviços</option>
+                        </select>
+                    </label>
+                </fieldset>
+
+                <footer class="form-footer">
+                    <button type="submit" class="btn-primary">Cadastrar</button>
+                    <a href="/WorkNet/login.html" class="link-login">Voltar ao Login</a>
+                </footer>
+            </form>
+        </section>
+
+        <section class="welcome-section">
+            <header>
+                <a href="/WorkNet/index.html">
+                    <img src="/WorkNet/img/imagem_2025-10-29_203356460-removebg-preview.png" alt="">
+                </a>
+            </header>
+            <article>
+                <h2>Faça seu Cadastro<br>para se tornar<br>nosso cliente</h2>
+                <p>Cadastre seus dados para criar sua conta na nossa site</p>
+            </article>
+        </section>
+    </main>
+
+    <script src="/WorkNet/JS/cadastro.js" defer></script>
+</body>
+</html>

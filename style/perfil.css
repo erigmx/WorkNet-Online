@@ -1,0 +1,572 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1f5f9;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== CABEÇALHO ===== */
+.cabecalho-principal {
+    background: url(/WorkNet/img/Vector.png);
+    background-color: #060061;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.barra-navegacao {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.marca-navegacao img {
+    width: 100px;
+    height: auto;
+}
+
+.formulario-pesquisa {
+    flex: 1;
+    max-width: 600px;
+    display: flex;
+    gap: 1rem;
+}
+
+.formulario-pesquisa input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    transition: border-color 0.3s;
+}
+
+.formulario-pesquisa input:focus {
+    outline: none;
+    border-color: #fff;
+}
+
+.formulario-pesquisa button {
+    padding: 0.5rem 0.5rem;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+    background: transparent;
+}
+
+.usuario-navegacao {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.usuario-navegacao a {
+    color: #fff;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.usuario-navegacao a:hover {
+    opacity: 0.8;
+}
+
+.botao-perfil {
+    padding: 0.75rem 1.5rem;
+    background-color: #fff;
+    color: #060061;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.botao-perfil:hover {
+    background-color: #f1f5f9;
+}
+
+.botao-sair {
+    padding: 0.75rem 1.5rem;
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.botao-sair:hover {
+    background-color: #dc2626;
+}
+
+/* ===== CONTEÚDO PRINCIPAL ===== */
+.conteudo-principal {
+    flex: 1;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.container-perfil {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* ===== CARD DO PERFIL ===== */
+.card-perfil {
+    background: white;
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.perfil-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.avatar-container {
+    position: relative;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #060061, #3b82f6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-editar-avatar {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #060061;
+    color: white;
+    border: 3px solid white;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+}
+
+.btn-editar-avatar:hover {
+    background: #040048;
+    transform: scale(1.1);
+}
+
+.perfil-info h1 {
+    font-size: 2rem;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+}
+
+.perfil-tipo {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #dbeafe;
+    color: #060061;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.perfil-membro-desde {
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+.perfil-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding-top: 2rem;
+    border-top: 2px solid #f1f5f9;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-numero {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #060061;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    display: block;
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+/* ===== CARDS GENÉRICOS ===== */
+.card-informacoes,
+.card-acoes,
+.card-meus-servicos,
+.card-configuracoes {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #f1f5f9;
+}
+
+.card-header h2 {
+    font-size: 1.5rem;
+    color: #1e293b;
+}
+
+.btn-editar-info {
+    padding: 0.5rem 1rem;
+    background: #f1f5f9;
+    border: none;
+    border-radius: 8px;
+    color: #060061;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-editar-info:hover {
+    background: #e2e8f0;
+}
+
+/* ===== INFORMAÇÕES ===== */
+.informacoes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.info-label {
+    font-size: 0.85rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.info-valor {
+    font-size: 1rem;
+    color: #1e293b;
+    font-weight: 600;
+}
+
+/* ===== AÇÕES DO PRESTADOR ===== */
+.acoes-grid {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.btn-acao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 80px;
+    padding-right: 80px;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-acao:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(6, 0, 97, 0.3);
+}
+
+.btn-acao .icone {
+    font-size: 2.5rem;
+}
+
+.btn-acao .texto {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.btn-cadastrar-servico {
+    background-color: #0f077c;
+}
+
+.btn-meus-servicos {
+    background-color: #0f077c;
+}
+
+
+/* ===== SERVIÇOS LISTA ===== */
+.servicos-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.servico-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    background: #f8fafc;
+    border-radius: 12px;
+    border: 2px solid #e2e8f0;
+    transition: all 0.3s;
+}
+
+.servico-item:hover {
+    border-color: #060061;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.servico-info h3 {
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+}
+
+.servico-info p {
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+.servico-acoes {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn-servico {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-editar-servico {
+    background: #dbeafe;
+    color: #060061;
+}
+
+.btn-editar-servico:hover {
+    background: #bfdbfe;
+}
+
+.btn-excluir-servico {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.btn-excluir-servico:hover {
+    background: #fecaca;
+}
+
+/* ===== CONFIGURAÇÕES ===== */
+.configuracoes-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.config-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: #f8fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 100%;
+    text-align: left;
+}
+
+.config-item:hover {
+    background: white;
+    border-color: #060061;
+}
+
+.config-item-danger:hover {
+    background: #fef2f2;
+    border-color: #dc2626;
+}
+
+.config-icone {
+    font-size: 1.5rem;
+}
+
+.config-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.config-titulo {
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.config-descricao {
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+.config-seta {
+    font-size: 1.5rem;
+    color: #cbd5e1;
+}
+
+/* ===== RODAPÉ ===== */
+footer {
+    background-color: #00084f;
+    background-image: url(/WorkNet/img/Vector.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    padding: 3rem 5rem;
+    margin-top: auto;
+}
+
+.container-rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rodape-esquerda {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.icones-sociais ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
+.icones-sociais a img {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    filter: brightness(0) invert(1);
+}
+
+.icones-sociais a img:hover {
+    opacity: 0.7;
+    transform: scale(1.1);
+}
+
+.rodape-direita ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    text-align: right;
+}
+
+.rodape-direita a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: opacity 0.3s ease;
+}
+
+.rodape-direita a:hover {
+    opacity: 0.7;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 1024px) {
+    .acoes-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .barra-navegacao {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .perfil-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .perfil-stats {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .informacoes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .acoes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .container-rodape {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .rodape-direita ul {
+        text-align: center;
+    }
+}

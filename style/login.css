@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+
+img{
+    width: 100px;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+main {
+    display: flex;
+    max-width: 900px;
+    width: 100%;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.welcome-section {
+    background: url(/WorkNet/img/Vector.png);
+    background-color: #060061;
+    color: white;
+    padding: 3rem;
+    display: flex;
+    gap: 80px;
+    flex-direction: column;
+}
+
+.welcome-section header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.welcome-section header h1 span {
+    text-decoration: underline;
+}
+
+.welcome-section article h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.welcome-section article p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+.form-section {
+    flex: 1;
+    padding: 3rem;
+    padding-bottom: 8rem;
+    padding-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+form {
+    width: 100%;
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+label span {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #1e293b;
+}
+
+input {
+    padding: 0.75rem 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #3b82f6;
+}
+
+input::placeholder {
+    color: #94a3b8;
+}
+
+.form-footer {
+    display: flex;
+    gap: 1rem;
+}
+
+button {
+    flex: 1;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background-color: #060061;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.btn-secondary {
+    background-color: #060061;
+    color: white;
+}
+
+.btn-secondary a{
+    text-decoration: none;
+    color: #ffff;
+}
+
+.btn-secondary:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(30, 41, 59, 0.4);
+}
+
+.checkbox-label {
+    flex-direction: row;
+    align-items: center;
+    /* gap: 0.5rem; */
+    cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 8px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.checkbox-label input[type="checkbox"]:hover {
+    border-color: #060061;
+}
+
+.checkbox-label input[type="checkbox"]:checked {
+    background-color: #060061;
+    border-color: #060061;
+}
+
+
+.checkbox-label span {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #475569;
+    cursor: pointer;
+    user-select: none;
+}
+
+.checkbox-label:hover span {
+    color: #1e293b;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    .welcome-section {
+        padding: 2rem;
+    }
+
+    .form-section {
+        padding: 2rem;
+    }
+}

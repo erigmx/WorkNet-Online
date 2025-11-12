@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkNet - Login</title>
+    <link rel="stylesheet" href="/WorkNet/style/login.css">
+</head>
+<body>
+    <main>
+        <section class="welcome-section">
+            <header>
+                <a href="/WorkNet/index.html">
+                    <img src="/WorkNet/img/imagem_2025-10-29_203356460-removebg-preview.png" alt="">
+                </a>
+            </header>
+            <article>
+                <h2>Olá,<br>Bem Vindo!</h2>
+                <p>Você já tem login com sua conta ou quer criar uma</p>
+            </article>
+        </section>
+
+        <section class="form-section">
+            <form>
+                <fieldset>
+                    <legend class="sr-only">Dados de Login</legend>
+                    
+                    <label for="email">
+                        <span>Email</span>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="exemplo@email.com"
+                            required
+                        >
+                    </label>
+
+                    <label for="senha">
+                        <span>Senha</span>
+                        <input 
+                            type="password" 
+                            id="senha" 
+                            name="senha" 
+                            placeholder="••••••••"
+                            required
+                        >
+                    </label>
+
+                    <label class="checkbox-label">
+                        <input 
+                            type="checkbox" 
+                            id="manter-conectado" 
+                            name="manter-conectado"
+                        >
+                        <span>Manter conectado</span>
+                    </label>
+
+                </fieldset>
+
+                <footer class="form-footer">
+                    <button type="submit" class="btn-primary">Entrar</button>
+                    <button type="button" class="btn-secondary" onclick="window.location.href='/WorkNet/cadastro.html'">Cadastrar</button>
+                </footer>
+            </form>
+        </section>
+    </main>
+
+    <script src="/WorkNet/JS/login.js" defer></script>
+</body>
+</html>
